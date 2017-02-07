@@ -5,16 +5,44 @@ html, body {
     radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
   background-attachment: fixed;
   color: #6cacc5;
+  font-family: monospace;
+  font-size: 30px;
 }
 
 button {
 	font-family: monospace;
+	font-size: 20px;
+	color: #6cacc5;
 	margin: 5px;
-	width: 2em
-	height: 2em;
-	background: #93832f;
+	width: 5em;
+	height: 5em;
+	background: rgba(42,50,113, .28);
+	text-align: center;
+	transition: all 0.5s;
+	border-style: none;
 
-	&:hover {
-		background: #c9b138;
-	}
+	 &:focus {
+    outline: 0; 
+  }
+}
+
+.calculator {
+	font-size: 20px;
+	margin: 0 auto;
+	width: 10em;
+}
+
+.bigButton {
+	background: #c97874;
+	color: black;
+}
+
+.DisplayText {
+	width: 400px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	padding-top: 20px;
+	text-align: right;
 }
