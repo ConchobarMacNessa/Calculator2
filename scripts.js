@@ -32,5 +32,10 @@ function decimal() { //to handle decimals and make sure there is always a number
 }
 
 function exponent(){ //to handle really big numbers
-
+	if (current.indexOf('e') == -1) {
+		current += 'e0';
+	}
+	while (input.firstChild)
+		input.removeChild(input.firstChild);
+		input.appendChild(document.createTextNode(current));
 }
