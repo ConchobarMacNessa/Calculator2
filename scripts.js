@@ -15,5 +15,22 @@ function addDigit(digit){ //adds the number to the display
 	while (input.firstChild)
 		input.removeChild(input.firstChild);
 		input.appendChild(document.createTextNode(current));
-	// input.innerHTML = current; Works, but no best practice
+	// input.innerHTML = current; Works, but not best practice
 } //maybe find an alternative to onclick functions
+ 
+function decimal() { //to handle decimals and make sure there is always a number in front of the decimal
+	if (current.length == 0){
+		current = "0.";
+	} else {
+		if (current.indexOf('.') == -1) { //i.e. if . is not there
+			current += '.';
+		};
+	};
+	while (input.firstChild)
+		input.removeChild(input.firstChild);
+		input.appendChild(document.createTextNode(current));
+}
+
+function exponent(){ //to handle really big numbers
+
+}
