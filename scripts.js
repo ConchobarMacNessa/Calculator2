@@ -1,6 +1,6 @@
 var current = "0"; //display
 	memory = "0"; //previous number
-	operation = 0; //i.e. * / + -
+	operation = ''; //i.e. * / + -
 	MaxLength = 30; //so we don't have infinite numbers
 	input = document.querySelector('.steps');
 
@@ -68,8 +68,18 @@ function clearLast(){
 function clearAll(){
 	current = '0';
 	memory = '0';
-	operation = 0;
+	operation = '';
 	while (input.firstChild)
 	input.removeChild(input.firstChild);
 	input.appendChild(document.createTextNode(current));
 }
+
+function Operations(op) { //adds +-*/ Store current in memory, store the operation, clear the display
+	operation = op;
+	memory = current;
+	current = '0';
+	while (input.firstChild)
+	input.removeChild(input.firstChild);
+	input.appendChild(document.createTextNode(current));
+}
+
