@@ -83,3 +83,24 @@ function Operations(op) { //adds +-*/ Store current in memory, store the operati
 	input.appendChild(document.createTextNode(current));
 }
 
+function Calculate() { //lazy work. Think of a better way to do this. 
+	var result = 0;
+	if (operation == '*') {
+		result = memory * current;
+	} else if (operation == '/') {
+		result = memory / current;
+	} else if (operation == '-') {
+		result = memory - current;
+	} else if (operation == '+') {
+		memory = parseInt(memory);
+		current = parseInt(current);
+		result = memory + current
+	}
+
+	current = result;
+	memory = '0';
+	operation = '';
+	while (input.firstChild)
+	input.removeChild(input.firstChild);
+	input.appendChild(document.createTextNode(current));
+}
